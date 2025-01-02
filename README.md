@@ -13,12 +13,6 @@
 
 本项目主要用于记录框架及中间件源码的阅读经验、个人理解及解析，希望能够使阅读源码变成一件简单有趣，且有价值的事情，抽空更新中... (如果本项目对您有帮助，请 watch、star、fork 素质三连一波，鼓励一下作者，谢谢）
 
-- Netlify: https://schunter.netlify.app
-- ~~Gitee Pages: https://doocs.gitee.io/source-code-hunter~~
-- GitHub Pages: https://doocs.github.io/source-code-hunter
-
-注：😶 Gitee Pages 站点遭 Gitee 官方误判为“包含违禁违规内容”，惨遭下线。
-
 ## Spring 系列
 
 ### IoC 容器
@@ -27,8 +21,10 @@
 - [将 bean 解析封装成 BeanDefinition](/docs/Spring/IoC/2、将bean解析封装成BeanDefinition.md)
 - [将 BeanDefinition 注册进 IoC 容器](/docs/Spring/IoC/3、将BeanDefinition注册进IoC容器.md)
 - [依赖注入(DI)](</docs/Spring/IoC/4、依赖注入(DI).md>)
+- [BeanFactoryPostProcessor](/docs/Spring/IoC/BeanFactoryPostProcessor.md)
 - [BeanPostProcessor](/docs/Spring/IoC/BeanPostProcessor.md)
 - [Spring BeanFactory 源码解析](/docs/Spring/clazz/Spring-beanFactory.md)
+- [循环依赖](/docs/Spring/IoC/循环依赖.md)
 
 ### AOP
 
@@ -60,9 +56,9 @@
 
 - [面筋哥 IoC 容器的一天(上)](</docs/Spring/Spring源码故事（瞎编版）/面筋哥IoC容器的一天(上).md>)
 
-### Spring整体脉络
+### Spring 整体脉络
 
-* [16张图解锁Spring的整体脉络](</docs/Spring/Spring整体脉络/16张图解锁Spring的整体脉络.md>)
+- [16 张图解锁 Spring 的整体脉络](/docs/Spring/Spring整体脉络/16张图解锁Spring的整体脉络.md)
 
 ### Spring 类解析
 
@@ -118,10 +114,22 @@
 - [SpringBoot 日志系统](/docs/SpringBoot/SpringBoot-LogSystem.md)
 - [SpringBoot ConditionalOnBean](/docs/SpringBoot/SpringBoot-ConditionalOnBean.md)
 
+### SpringBootBatch
+
+- [SpringBootBatch 源码](/docs/SpringBootBatch/SpringBootBatch源码.md)
+
+### Spring Cloud
+
+- [Spring Cloud Commons 源码](docs/SpringCloud/spring-cloud-commons-source-note.md)
+- [Spring Cloud OpenFeign 源码](docs/SpringCloud/spring-cloud-openfeign-source-note.md)
+- [Spring Cloud Gateway 源码](docs/SpringCloud/spring-cloud-gateway-source-note.md)
+
 ### SpringSecurity
-- [SpringSecurity请求全过程解析](/docs/SpringSecurity/SpringSecurity请求全过程解析.md)
-- [SpringSecurity自定义用户认证](/docs/SpringSecurity/SpringSecurity自定义用户认证.md)
-- 
+
+- [SpringSecurity 请求全过程解析](/docs/SpringSecurity/SpringSecurity请求全过程解析.md)
+- [SpringSecurity 自定义用户认证](/docs/SpringSecurity/SpringSecurity自定义用户认证.md)
+- [SpringSecurity 流程补充](/docs/SpringSecurity/SpringSecurity流程补充.md)
+
 ## MyBatis
 
 ### 基础支持层
@@ -148,14 +156,14 @@
 - [Mybatis-Alias](/docs/Mybatis/核心处理层/Mybatis-Alias.md)
 - [Mybatis-Cursor](/docs/Mybatis/核心处理层/Mybatis-Cursor.md)
 - [Mybatis-DataSource](/docs/Mybatis/核心处理层/Mybatis-DataSource.md)
-- [Mybatis-DyanmicSqlSourcce](/docs/Mybatis/核心处理层/Mybatis-DyanmicSqlSourcce.md)
+- [Mybatis-DynamicSqlSource](/docs/Mybatis/核心处理层/Mybatis-DynamicSqlSource.md)
 - [Mybatis-MapperMethod](/docs/Mybatis/核心处理层/Mybatis-MapperMethod.md)
 - [Mybatis-MetaObject](/docs/Mybatis/核心处理层/Mybatis-MetaObject.md)
 - [Mybatis-MethodSignature](/docs/Mybatis/核心处理层/Mybatis-MethodSignature.md)
 - [Mybatis-ObjectWrapper](/docs/Mybatis/核心处理层/Mybatis-ObjectWrapper.md)
 - [Mybatis-ParamNameResolver](/docs/Mybatis/核心处理层/Mybatis-ParamNameResolver.md)
 - [Mybatis-SqlCommand](/docs/Mybatis/核心处理层/Mybatis-SqlCommand.md)
-- [Mybats-GenericTokenParser](/docs/Mybatis/核心处理层/Mybats-GenericTokenParser.md)
+- [Mybatis-GenericTokenParser](/docs/Mybatis/核心处理层/Mybatis-GenericTokenParser.md)
 
 ## Netty
 
@@ -273,6 +281,21 @@
 - [Sentinel 底层 LongAdder 的计数实现](docs/Sentinel/Sentinel底层LongAdder的计数实现.md)
 - [Sentinel 限流算法的实现](docs/Sentinel/Sentinel限流算法的实现.md)
 
+## RocketMQ
+
+- [RocketMQ NameServer 与 Broker 的通信](docs/rocketmq/rocketmq-nameserver-broker.md)
+- [RocketMQ 生产者启动流程](docs/rocketmq/rocketmq-producer-start.md)
+- [RocketMQ 消息发送流程](docs/rocketmq/rocketmq-send-message.md)
+- [RocketMQ 消息发送存储流程](docs/rocketmq/rocketmq-send-store.md)
+- [RocketMQ MappedFile 内存映射文件详解](docs/rocketmq/rocketmq-mappedfile-detail.md)
+- [RocketMQ ConsumeQueue 详解](docs/rocketmq/rocketmq-consumequeue.md)
+- [RocketMQ CommitLog 详解](docs/rocketmq/rocketmq-commitlog.md)
+- [RocketMQ IndexFile 详解](docs/rocketmq/rocketmq-indexfile.md)
+- [RocketMQ 消费者启动流程](docs/rocketmq/rocketmq-consumer-start.md)
+- [RocketMQ 消息拉取流程](docs/rocketmq/rocketmq-pullmessage.md)
+- [RocketMQ Broker 处理拉取消息请求流程](docs/rocketmq/rocketmq-pullmessage-processor.md)
+- [RocketMQ 消息消费流程](docs/rocketmq/rocketmq-consume-message-process.md)
+
 ## 番外篇（JDK 1.8）
 
 ### 基础类库
@@ -297,8 +320,6 @@
 - [Executor 线程池组件 源码赏析](docs/JDK/concurrentCoding/Executor线程池组件.md)
 - [Lock 锁组件 源码赏析](docs/JDK/concurrentCoding/Lock锁组件.md)
 - [详解 AbstractQueuedSynchronizer 抽象类](docs/JDK/concurrentCoding/详解AbstractQueuedSynchronizer.md)
-- [CountdownLatch 类 源码赏析](docs/JDK/concurrentCoding/CountdownLatch.md)
-- [CyclicBarrier 类 源码赏析](docs/JDK/concurrentCoding/CyclicBarrier.md)
 - [Semaphore 类 源码赏析](docs/JDK/concurrentCoding/Semaphore.md)
 
 ## 学习心得
@@ -322,6 +343,10 @@
 - [Java 并发编程在各主流框架中的应用](docs/LearningExperience/ConcurrentProgramming/Java并发编程在各主流框架中的应用.md)
 
 ---
+
+## Stars 趋势
+
+[![Star History Chart](https://api.star-history.com/svg?repos=doocs/source-code-hunter&type=Date)](https://star-history.com/#doocs/source-code-hunter&Date)
 
 ## Doocs 社区优质项目
 
@@ -349,25 +374,19 @@ GitHub 技术社区 [Doocs](https://github.com/doocs)，致力于打造一个内
 
 ## 公众号
 
-[Doocs](https://github.com/doocs) 技术社区旗下唯一公众号「**Doocs 开源社区**」​，欢迎扫码关注，**专注分享技术领域相关知识及行业最新资讯**。当然，也可以加我个人微信（备注：GitHub），拉你进技术交流群。
+[Doocs](https://github.com/doocs) 技术社区旗下唯一公众号「**Doocs**」​，欢迎扫码关注，**专注分享技术领域相关知识及行业最新资讯**。当然，也可以加我个人微信（备注：GitHub），拉你进技术交流群。
 
 <table>
   <tr>
-    <td align="center" style="width: 200px;">
-      <a href="https://github.com/doocs">
-        <img src="./images/qrcode-for-doocs.jpg" style="width: 400px;"><br>
-        <sub>公众平台</sub>
-      </a><br>
+    <td align="center" style="width: 260px;">
+      <img src="https://cdn-doocs.oss-cn-shenzhen.aliyuncs.com/gh/doocs/images/qrcode-for-doocs.png" style="width: 400px;"><br>
     </td>
-    <td align="center" style="width: 200px;">
-      <a href="https://github.com/yanglbme">
-        <img src="./images/qrcode-for-yanglbme.jpg" style="width: 400px;"><br>
-        <sub>个人微信</sub>
-      </a><br>
+    <td align="center" style="width: 260px;">
+      <img src="https://cdn-doocs.oss-cn-shenzhen.aliyuncs.com/gh/doocs/images/qrcode-for-yanglbme.png" style="width: 400px;"><br>
     </td>
   </tr>
 </table>
 
-关注「**Doocs 开源社区**」公众号，回复 **PDF**，即可获取 [互联网 Java 工程师进阶知识完全扫盲](https://github.com/doocs/advanced-java) 项目离线 PDF 文档（283 页精华），学习更加方便！
+关注「**Doocs**」公众号，回复 **PDF**，即可获取 [互联网 Java 工程师进阶知识完全扫盲](https://github.com/doocs/advanced-java) 项目离线 PDF 文档（283 页精华），学习更加方便！
 
 ![](./images/pdf.png)
